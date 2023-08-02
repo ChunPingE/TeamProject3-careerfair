@@ -41,7 +41,16 @@
 <body>
 <my:font/>
 <my:job-header-nav/>
-<my:job-banner/>
+
+<my:job-main-banner>
+    안녕하세요! 지원자 박춘수 입니다! <br><br>
+    취업박람회 프로젝트입니다. <br><br>
+    로그인이 필요합니다<br><br>
+    관리자 계정 admin0 / admin0admin0* <br><br>
+    기업계정 chun / chun1234* <br><br>
+    취업준비생계정 pcc105 / pcc105pcc105* <br><br>
+    불편을 드려 죄송합니다!!
+</my:job-main-banner>
 
 
 <!-- Start features Area -->
@@ -307,7 +316,6 @@
 <!-- End calto-action Area -->
 
 
-
 <my:job-footer/>
 
 <script src="/job-js/vendor/jquery-2.2.4.min.js"></script>
@@ -315,8 +323,6 @@
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
 <script src="/job-js/vendor/bootstrap.min.js"></script>
-<script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
 <script src="/job-js/easing.min.js"></script>
 <script src="/job-js/hoverIntent.js"></script>
 <script src="/job-js/superfish.min.js"></script>

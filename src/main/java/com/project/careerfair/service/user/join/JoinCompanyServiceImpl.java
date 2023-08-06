@@ -49,6 +49,9 @@ public class JoinCompanyServiceImpl implements JoinCompanyService {
     public Map<String, Object> getDetail(Integer companyId, Integer page, Integer pageNow) {
         //기업
         Company company = companyMapper.getDetail(companyId);
+        
+        // 회사명
+        String companyName = company.getCompanyName();
 
         // 산업 목록
         List<Industry> industryList = industryService.getIndustryList();
@@ -62,7 +65,8 @@ public class JoinCompanyServiceImpl implements JoinCompanyService {
 
         //페이지네이션 정보
         //총 현재 공고 개수
-        Integer countNow = postingMapper.countNowAll(companyId, round);
+        // 회사명을 기준으로 변경
+        Integer countNow = postingMapper.countNowAll(companyName, round);
 
         // 마지막 페이지 번호
         // 총 글개수 -1 / pageSize + 1
@@ -81,8 +85,9 @@ public class JoinCompanyServiceImpl implements JoinCompanyService {
 
         // 다음 페이지
         Integer nextPageNumNow = pageNow + 1;
-
-        List<Posting> nowPostingList = postingMapper.getNowPostingList(pageSizeNow, startNumNow, companyId, round);
+        
+        // 회사명을 기준으로 변경
+        List<Posting> nowPostingList = postingMapper.getNowPostingList(pageSizeNow, startNumNow, companyName, round);
 
         Map<String, Object> pageInfoNow = new HashMap<>();
         pageInfoNow.put("lastPage", lastPageNow);
@@ -98,7 +103,8 @@ public class JoinCompanyServiceImpl implements JoinCompanyService {
 
         //페이지네이션 정보
         //총 지난 공고 개수
-        Integer count = postingMapper.countAll(companyId, round);
+        // 회사명을 기준으로 변경
+        Integer count = postingMapper.countAll(companyName, round);
 
         // 마지막 페이지 번호
         // 총 글개수 -1 / pageSize + 1
@@ -126,7 +132,8 @@ public class JoinCompanyServiceImpl implements JoinCompanyService {
         pageInfo.put("prevPageNum", prevPageNum);
         pageInfo.put("nextPageNum", nextPageNum);
 
-        List<Posting> pastPostingList = postingMapper.getPastPostingList(startNum, pageSize, companyId, round);
+        // 회사명을 기준으로 변경
+        List<Posting> pastPostingList = postingMapper.getPastPostingList(startNum, pageSize, companyName, round);
 
         return Map.of("company", company,
                 "industryList", industryList,

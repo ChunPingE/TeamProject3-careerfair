@@ -46,5 +46,4 @@ public class JoinControllerAPI {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build(); // 500 내부 서버 오류 응답
         }
     }
-
 }

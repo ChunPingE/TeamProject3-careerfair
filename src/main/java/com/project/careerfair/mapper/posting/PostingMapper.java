@@ -9,15 +9,16 @@ import java.util.List;
 public interface PostingMapper {
 
     // 기업별 현재 포스팅 
-    List<Posting> getNowPostingList(Integer pageSizeNow, Integer startNumNow, Integer companyId, Integer round);
+    List<Posting> getNowPostingList(Integer pageSizeNow, Integer startNumNow, String companyName, Integer round);
 
-    Integer countNowAll(Integer companyId, Integer round);
+    // 기업별 회차 기준 현재 공고 수
+    Integer countNowAll(String companyName, Integer round);
 
-    // 기업별 현재 포스팅 수
-    Integer countAll(Integer companyId, Integer round);
+    // 기업별 포스팅 수
+    Integer countAll(String companyName, Integer round);
 
     // 기업별 과거 포스팅
-    List<Posting> getPastPostingList(Integer startNum, Integer pageSize, Integer companyId, Integer round);
+    List<Posting> getPastPostingList(Integer startNum, Integer pageSize, String companyName, Integer round);
 
     @Select("""
             <script>

@@ -17,7 +17,7 @@ function enableSubmit() {
     }
 }
 //==============================아이디 유효성검사 ================================================
-$("#input-id").blur(function (){
+$("#input-id").keyup(function (){
     let idCheck = /^(?=.*[a-zA-Z])[a-zA-Z0-9]{6,20}$/;
 
     if($("#input-id").val() == "") {

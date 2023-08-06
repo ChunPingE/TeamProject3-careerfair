@@ -1,9 +1,9 @@
 # TeamProject3-careerfair
 
 # 프로젝트 제목: 손에손JOB고
-- 회차관리 기능을 통한 참여기업, 채용공고 등의 박람회 데이터를 누적하고 재활용할 수 있는 지속적이며 효율적인 온라인 채용 박람회 관리 시스템입니다.
-  GIT  : https://github.com/ChunPingE/TeamProject3-careerfair
-  배포 : http://3.38.192.50:8083
+- 회차관리 기능을 통한 참여기업, 채용공고 등의 박람회 데이터를 누적하고 재활용할 수 있는 지속적이며 효율적인 온라인 채용 박람회 관리 시스템입니다. <br><br>
+  GIT  : https://github.com/ChunPingE/TeamProject3-careerfair <br><br>
+  배포 : http://3.38.192.50:8083 <br><br>
   호스팅한 서버가 불안정하여 터지는 경우가 많습니다. 확인할때마다 복구하겠습니다 죄송합니다.
 
 ## 개발인원
